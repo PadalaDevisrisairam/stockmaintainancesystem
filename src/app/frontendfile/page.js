@@ -16,7 +16,7 @@ export default function CustomerForm() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/customers", { // Adjust the endpoint if needed
+      const response = await fetch("https://stockmaintainancesystem-oebb.onrender.com/api/customers", { // Adjust the endpoint if needed
         method: "POST",
         headers: {
           "Content-Type": "application/json",

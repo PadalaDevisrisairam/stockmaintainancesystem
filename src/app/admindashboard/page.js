@@ -10,7 +10,7 @@ const AdminDashboard = () => {  // Component name must start with uppercase
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/products");
+        const response = await fetch("https://stockmaintainancesystem-oebb.onrender.com/api/products");
         if (response.ok) {
           const data = await response.json();
           setProducts(data); // Store fetched products

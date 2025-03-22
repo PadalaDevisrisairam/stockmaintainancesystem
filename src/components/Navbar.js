@@ -42,7 +42,7 @@ export default function Navbar() {
       return;
     }
     try {
-      const response = await fetch("http://localhost:3000/api/customers", {
+      const response = await fetch("https://stockmaintainancesystem-oebb.onrender.com/api/customers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(registerData),
@@ -62,7 +62,7 @@ export default function Navbar() {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/api/customers?username=${loginData.username}&password=${loginData.password}`);
+      const response = await fetch(`https://stockmaintainancesystem-oebb.onrender.com/api/customers?username=${loginData.username}&password=${loginData.password}`);
       
       if (response.ok) {
         alert("customer entered ");
@@ -80,7 +80,7 @@ export default function Navbar() {
   const handleAdminSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/api/admins?username=${adminData.username}&password=${adminData.password}`);
+      const response = await fetch(`https://stockmaintainancesystem-oebb.onrender.com/api/admins?username=${adminData.username}&password=${adminData.password}`);
       if (response.ok) {
         alert("admin Login successful");
         setIsAdminModalOpen(false);

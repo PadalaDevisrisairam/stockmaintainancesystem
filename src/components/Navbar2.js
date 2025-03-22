@@ -18,7 +18,7 @@ export default function Navbar2() {
   const handleProductSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/products", {
+      const response = await fetch("https://stockmaintainancesystem-oebb.onrender.com/api/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(productData),
@@ -29,7 +29,7 @@ export default function Navbar2() {
         setProductData({ name: "", quantity: 0, price: "" });
 
         // Refresh the product list
-        const newResponse = await fetch("http://localhost:3000/api/products");
+        const newResponse = await fetch("https://stockmaintainancesystem-oebb.onrender.com/api/products");
         const newData = await newResponse.json();
         setProducts(newData);
       } else {

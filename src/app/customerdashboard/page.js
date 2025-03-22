@@ -10,7 +10,7 @@ const CustomerDashboard = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/products");
+        const response = await fetch("https://stockmaintainancesystem-oebb.onrender.com/api/products");
         if (response.ok) {
           const data = await response.json();
           setProducts(data); // Store fetched products
@@ -47,7 +47,7 @@ const CustomerDashboard = () => {
 
     // Send PATCH request to update backend
     try {
-      const response = await fetch("http://localhost:3000/api/products", {
+      const response = await fetch("https://stockmaintainancesystem-oebb.onrender.com/api/products", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
